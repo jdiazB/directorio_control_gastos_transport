@@ -1,13 +1,24 @@
 class Camion {
-  String id;
-  String nombre;
+  int? id;
+  String camion;
 
-  Camion({required this.id, required this.nombre});
+  Camion({ this.id, required this.camion});
+
+  factory Camion.deMapAModel(Map<String, dynamic> mapa) => Camion(
+      camion: mapa["camion"],
+    id: mapa["id"]
+
+  );
 }
 
 class Trabajador {
-  String id;
-  String nombre;
+  int?  id;
+  String trabajador;
 
-  Trabajador({required this.id, required this.nombre});
+  Trabajador({ this.id, required this.trabajador});
+  factory Trabajador.deMapAModel(Map<String, dynamic> mapa) => Trabajador(
+      id: mapa["id"],
+    trabajador: mapa["trabajador"]
+
+  );
 }
